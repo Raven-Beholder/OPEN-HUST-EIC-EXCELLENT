@@ -1,11 +1,3 @@
-//
-//  main.c
-//  Sum of Two Long Integers
-//
-//  Created by RavenChen on 2020/4/11.
-//  Copyright © 2020 RavenChen. All rights reserved.
-//
-
 #include <stdio.h>
 #include <stdlib.h>
 #define RIGHT 1
