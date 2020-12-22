@@ -1,0 +1,28 @@
+module  freq_change(//???
+		//system signals
+        input clk,//50Mhz ????
+        input rst_n,//????
+		
+        output reg clk_1hz//1Hz??
+        );
+    
+    reg [25: 0] clk_cnt;//????????????
+    //????50%?50MHz?????20ns?10ns??????
+    always  @(posedge clk or negedge rst_n) begin
+            if(rst_n == 1'b0)//??rst_n?0???????
+                clk_cnt <= 'd0;
+            else if(clk_cnt == 'd24_999)//?50MHz???1Hz?24'900'000???????50%?
+                clk_cnt <= 'd0;
+            else
+                clk_cnt <= clk_cnt + 1'b1;//???????
+    end
+
+    //clk_1hz
+    always @(posedge clk or negedge rst_n) begin
+            if(rst_n == 1'b0)//??????
+                clk_1hz <= 1'b0;
+            else if(clk_cnt == 'd24_999)
+                clk_1hz <= ~clk_1hz;//??
+    end
+
+endmodule
