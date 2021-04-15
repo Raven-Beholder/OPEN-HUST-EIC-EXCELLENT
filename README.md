@@ -10,4 +10,4 @@
 
 不定期更新一些小收获
 
-文件采用UTF-8编码，Windows下默认的GB K编码可能会出现乱码，请在VSCode中用UTF-8编码打开
+文件采用UTF-8编码，Windows下默认的GBK编码可能会出现乱码，请在VSCode中用UTF-8编码打开
